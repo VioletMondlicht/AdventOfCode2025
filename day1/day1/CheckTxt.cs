@@ -4,20 +4,19 @@
     {
         public void CheckFile()
         {
-            int milliseconds = 1000;
             string fileName = "input.txt";
             if (File.Exists(fileName))
             {
                 if( new FileInfo( "input.txt" ).Length == 0 )
                     {
                     Console.WriteLine("input.txt found in: {0}", Directory.GetCurrentDirectory());
-                    Console.WriteLine("file empty, exit programm....");
+                    Console.WriteLine("File empty, exit programm....");
                     Environment.Exit(0);
                     }
                 else
                     {
                     Console.WriteLine("input.txt found in {0}", Directory.GetCurrentDirectory());
-                    Console.WriteLine("calculating, please wait little elf...");
+                    Console.WriteLine("Calculating, please wait little elf...");
                     }
             }
             else
