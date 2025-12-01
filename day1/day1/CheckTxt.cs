@@ -18,10 +18,6 @@
                     {
                     Console.WriteLine("input.txt found in {0}", Directory.GetCurrentDirectory());
                     Console.WriteLine("calculating, please wait little elf...");
-                    Thread.Sleep(milliseconds);
-                    Console.WriteLine("calculating...");
-                    Thread.Sleep(milliseconds);
-                    Console.WriteLine("calculating...");
                     }
             }
             else
