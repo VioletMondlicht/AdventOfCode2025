@@ -15,27 +15,23 @@ public class PuzzleSolver
             {
                 int.TryParse(line.Substring(1), out int command);
                 
-                int newCurrentPosition = currentPosition - command;
-                if (newCurrentPosition < 0)
+                currentPosition = (currentPosition-command)%100;
+                if (currentPosition < 0)
                 {
-                    newCurrentPosition = newCurrentPosition+100;
+                    currentPosition = currentPosition+100;
                 }
-                currentPosition = newCurrentPosition;
             }
-            if (line[0] == 'R')
+            else if (line[0] == 'R')
             {
                 int.TryParse(line.Substring(1), out int command);
 
-                int newCurrentPosition = (currentPosition+command)%100;
-                currentPosition = newCurrentPosition;
+                currentPosition = (currentPosition+command)%100;
             }
-
             if (currentPosition == 0)
                 {
                     password++;
                 }
+            }
+        Console.WriteLine($"{password}");
         }
-    Console.WriteLine($"{password}");
-
     }
-}
