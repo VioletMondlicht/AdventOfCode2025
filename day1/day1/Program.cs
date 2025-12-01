@@ -14,5 +14,8 @@ public class Programm
 
         CheckTxt check = new();
         check.CheckFile();
+
+        PuzzleSolver solve = new();
+        solve.SolvePuzzle();
     }
 }
